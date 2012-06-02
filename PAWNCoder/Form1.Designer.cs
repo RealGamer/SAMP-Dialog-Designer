@@ -1,4 +1,4 @@
-﻿namespace PAWNCoder
+namespace PAWNCoder
 {
 	partial class Form1
 	{
@@ -41,6 +41,10 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.HeadlineTextBox = new System.Windows.Forms.RichTextBox();
+            this.Button1TextBox = new System.Windows.Forms.RichTextBox();
+            this.Button2TextBox = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -67,7 +71,6 @@
             this.textBox2.MaxLength = 0;
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
             this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBox2.Size = new System.Drawing.Size(545, 297);
             this.textBox2.TabIndex = 3;
@@ -76,16 +79,16 @@
             // 
             this.button1.Location = new System.Drawing.Point(5, 314);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 20);
+            this.button1.Size = new System.Drawing.Size(65, 20);
             this.button1.TabIndex = 4;
-            this.button1.Text = "PAWNCode generieren";
+            this.button1.Text = "Generiere";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(139, 318);
+            this.label2.Location = new System.Drawing.Point(167, 318);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 5;
@@ -113,8 +116,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -181,11 +184,58 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(76, 314);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(74, 20);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "Degeneriere";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // HeadlineTextBox
+            // 
+            this.HeadlineTextBox.AcceptsTab = true;
+            this.HeadlineTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HeadlineTextBox.Location = new System.Drawing.Point(5, 291);
+            this.HeadlineTextBox.MaxLength = 0;
+            this.HeadlineTextBox.Name = "HeadlineTextBox";
+            this.HeadlineTextBox.Size = new System.Drawing.Size(187, 22);
+            this.HeadlineTextBox.TabIndex = 13;
+            this.HeadlineTextBox.Text = "Überschrift";
+            // 
+            // Button1TextBox
+            // 
+            this.Button1TextBox.AcceptsTab = true;
+            this.Button1TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button1TextBox.Location = new System.Drawing.Point(191, 291);
+            this.Button1TextBox.MaxLength = 0;
+            this.Button1TextBox.Name = "Button1TextBox";
+            this.Button1TextBox.Size = new System.Drawing.Size(180, 22);
+            this.Button1TextBox.TabIndex = 14;
+            this.Button1TextBox.Text = "Button1";
+            // 
+            // Button2TextBox
+            // 
+            this.Button2TextBox.AcceptsTab = true;
+            this.Button2TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button2TextBox.Location = new System.Drawing.Point(370, 291);
+            this.Button2TextBox.MaxLength = 0;
+            this.Button2TextBox.Name = "Button2TextBox";
+            this.Button2TextBox.Size = new System.Drawing.Size(180, 22);
+            this.Button2TextBox.TabIndex = 15;
+            this.Button2TextBox.Text = "Button2";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1336, 643);
+            this.Controls.Add(this.Button2TextBox);
+            this.Controls.Add(this.Button1TextBox);
+            this.Controls.Add(this.HeadlineTextBox);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
@@ -225,7 +275,11 @@
 		private System.Windows.Forms.RichTextBox richTextBox1;
 		private System.Windows.Forms.PictureBox pictureBox4;
 		private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button2;
+	        private System.Windows.Forms.Button button2;
+	        private System.Windows.Forms.Button button3;
+	        private System.Windows.Forms.RichTextBox HeadlineTextBox;
+	        private System.Windows.Forms.RichTextBox Button1TextBox;
+	        private System.Windows.Forms.RichTextBox Button2TextBox;
 	}
 }
 
